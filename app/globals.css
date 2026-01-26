@@ -19,6 +19,29 @@
   }
 }
 
+.pixel-text {
+  text-shadow: 
+    4px 4px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  image-rendering: pixelated;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+.animate-wave {
+  animation: wave 0.5s ease-in-out 3;
+  transform-origin: bottom center;
+}
+
+
+
 body {
   background: var(--background);
   color: var(--foreground);
