@@ -63,11 +63,11 @@ const [messageIndex, setMessageIndex] = useState(0);
             {/* Pixelated Background */}
             <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div
-                className="absolute inset-0"
+                className="absolute inset-0 grid-animate"
                 style={{
                 backgroundImage: `
-                    linear-gradient(0deg, transparent 24%, rgba(255,0,255,0.3) 25%, rgba(255,0,255,0.3) 26%, transparent 27%, transparent 74%, rgba(255,0,255,0.3) 75%, rgba(255,0,255,0.3) 76%, transparent 77%, transparent),
-                    linear-gradient(90deg, transparent 24%, rgba(0,255,255,0.3) 25%, rgba(0,255,255,0.3) 26%, transparent 27%, transparent 74%, rgba(0,255,255,0.3) 75%, rgba(0,255,255,0.3) 76%, transparent 77%, transparent)
+                    linear-gradient(0deg, transparent 24%, rgba(255, 0, 255, 0.58) 25%, rgba(255,0,255,0.58) 26%, transparent 27%, transparent 74%, rgba(255,0,255,0.3) 75%, rgba(255,0,255,0.3) 76%, transparent 77%, transparent),
+                    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.58) 25%, rgba(0,255,255,0.58) 26%, transparent 27%, transparent 74%, rgba(0,255,255,0.3) 75%, rgba(0,255,255,0.3) 76%, transparent 77%, transparent)
                 `,
                 backgroundSize: "50px 50px",
                 imageRendering: "pixelated",
@@ -122,15 +122,48 @@ const [messageIndex, setMessageIndex] = useState(0);
                 HELLO, I'M MATTHEW!
             </h1>
 
-            {/* Typing Terminal */}
-            <div
-                className="mb-8 p-4 bg-purple-900 border-4 border-pink-500 min-h-[70px]"
-                style={{ boxShadow: "8px 8px 0 0 #000" }}
-            >
-                <p className="text-xs text-white">
+            <div className="mb-8 p-4 bg-purple-900 border-4 border-pink-500 inline-block min-h-[80px] flex items-center justify-center" style={{ boxShadow: '8px 8px 0 0 #000' }}>
+            <p className="text-[10px] sm:text-xs text-white leading-relaxed max-w-lg">
                 <span className="text-green-400">&gt;_</span> {displayText}
                 <span className="animate-pulse text-green-400">|</span>
-                </p>
+            </p>
+            </div>
+
+            <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            <a
+                href="https://github.com/MatthewJiang168977"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-purple-600 border-4 border-white hover:bg-purple-500 transition-colors"
+                style={{ boxShadow: '6px 6px 0 0 #000' }}
+            >
+                <Github size={24} />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/matthew-m-jiang/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-cyan-500 border-4 border-white hover:bg-cyan-400 transition-colors"
+                style={{ boxShadow: '6px 6px 0 0 #000' }}
+            >
+                <Linkedin size={24} />
+            </a>
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mmj9715@nyu.edu&su=Let%27s%20Connect&body=Hi%20Matthew,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white border-4 border-red-500 hover:bg-gray-100 transition-colors relative"
+                style={{ boxShadow: '6px 6px 0 0 #000' }}
+            >
+                {/* Gmail-style icon */}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="#EA4335"/>
+                <path d="M22 6l-10 7L2 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 6l10 7 10-7v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6z" fill="#34A853" fillOpacity="0.3"/>
+                <path d="M2 18V6l10 7" fill="#FBBC04" fillOpacity="0.5"/>
+                <path d="M22 18V6l-10 7" fill="#EA4335" fillOpacity="0.5"/>
+                </svg>
+            </a>
             </div>
 
             <button

@@ -40,7 +40,14 @@
   transform-origin: bottom center;
 }
 
-
+@keyframes gridMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-20px, -20px); }
+  100% { transform: translate(0,0); }
+}
+.grid-animate {
+  animation: gridMove 12s linear infinite;
+}
 
 body {
   background: var(--background);
