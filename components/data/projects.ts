@@ -32,6 +32,7 @@ export const projects: Project[] = [
     description:
       "A serverless pipeline for AI-driven analytics, built on event-driven AWS infrastructure with Supabase for storage.",
     stack: ["AWS Lambda", "EventBridge", "Supabase"],
+    repoUrl: "https://github.com/MatthewJiang168977/Vyral",
   },
   {
     title: "STACKOVERFLOW",
