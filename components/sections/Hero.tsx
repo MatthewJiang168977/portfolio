@@ -1,9 +1,9 @@
 "use client";
 import { Github, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const typingMessages = [
-  "working on Disco...",
   "building cool stuff...",
   "learning new tech...",
   "drawing pixel art...",
@@ -66,8 +66,8 @@ const [messageIndex, setMessageIndex] = useState(0);
                 className="absolute inset-0 grid-animate"
                 style={{
                 backgroundImage: `
-                    linear-gradient(0deg, transparent 24%, rgba(255, 0, 255, 0.58) 25%, rgba(255,0,255,0.58) 26%, transparent 27%, transparent 74%, rgba(255,0,255,0.3) 75%, rgba(255,0,255,0.3) 76%, transparent 77%, transparent),
-                    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.58) 25%, rgba(0,255,255,0.58) 26%, transparent 27%, transparent 74%, rgba(0,255,255,0.3) 75%, rgba(0,255,255,0.3) 76%, transparent 77%, transparent)
+                    linear-gradient(0deg, transparent 24%, rgba(255, 0, 255, 0.58) 25%, rgba(255,0,255,0.58) 26%, transparent 27%, transparent 74%,rgba(255,0,255,0.58) 76%, transparent 77%, transparent),
+                    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.58) 25%, rgba(0,255,255,0.58) 26%, transparent 27%, transparent 74%,rgba(0,255,255,0.58) 76%, transparent 77%, transparent)
                 `,
                 backgroundSize: "50px 50px",
                 imageRendering: "pixelated",
@@ -166,15 +166,13 @@ const [messageIndex, setMessageIndex] = useState(0);
             </a>
             </div>
 
-            <button
-                onClick={() =>
-                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-                }
+            <Link
+                href="/projects"
                 className="px-6 py-3 bg-green-500 text-black border-4 border-white hover:bg-green-400 transition-all text-xs"
                 style={{ boxShadow: "6px 6px 0 0 #000" }}
             >
                 VIEW MY WORK ▼
-            </button>
+            </Link>
 
             </div>
         </section>
